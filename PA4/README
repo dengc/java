@@ -1,0 +1,46 @@
+Name: Chufan Deng
+USC NetID: chufande
+CS 455 PA4
+Spring 2017
+
+----------------------------------------------
+CERTIFY IT'S YOUR WORK
+
+"I certify that the work submitted for this assignment does not
+violate USC's student conduct code.  In particular, the work is my
+own, not a collaboration, and does not involve code created by other
+people, except for the the resources explicitly mentioned in the CS 455
+Course Syllabus.  And I did not share my solution or parts of it with
+other students in the course."
+
+Initial below to "sign" the above statement:
+
+CD
+----------------------------------------------
+ACKNOWLEDGE ANY OUTSIDE SOURCES
+
+List here any code you submitted for this assignment that was written
+with significant help of a course staff member, or code used from the
+textbook.  Be specific about what methods or algorithms are involved,
+and what sections of the textbook are involved (if applicable): [you do
+not need to list any of the code that we wrote for the assignment,
+i.e., the contents of the starter files for the assignment]
+
+
+
+----------------------------------------------
+KNOWN BUGS or LIMITATIONS:
+
+
+
+----------------------------------------------
+DESCRIPTION OF YOUR CLASS DESIGN AND ALGORITHMS AND DATA STRUCTURES USED:
+
+Class:
+Rack - can get the subnets of a word
+AnagramDictionary - can get anagrams of a word
+ScoreTable - put all letters and their scores in a map, and can get the score of a word
+WordFinder - main class
+I use a set to store all result words and a map for storing the words and their corresponding scores. Then sort the map by value then by key, to make words in alphabetical order if having same scores.  
+----------------------------------------------
+ANY OTHER NOTES FOR THE GRADER:
