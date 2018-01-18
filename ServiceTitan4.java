@@ -3,13 +3,16 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 
-public class blizzard1{
+public class ServiceTitan4{
     public static void main(String[] args) {
-        
+        int[] nums = {4,6,3,2};
+
+        long res = kSub(3, nums);
+        System.out.println(res);
     }
 
     public static long kSub(int k, int[] nums) {
-        int [] sum = new int[nums.length];
+        int[] sum = new int[nums.length];
         long count = 0;    
         sum[0] = nums[0];
 
@@ -27,8 +30,9 @@ public class blizzard1{
 
             count += kVal[mod];
             kVal[mod] += 1;
-
         }
+        System.out.println(Arrays.toString(sum));
+        System.out.println(Arrays.toString(kVal));
         return count;
     }
 }
