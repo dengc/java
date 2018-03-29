@@ -19,3 +19,65 @@
 #### Different Filters
 - RGB -> associated with primaries
 - XYZ -> CIE
+
+
+## Information  Theory & Compression
+-------------------------------------
+### 计算1：
+If your vocabulary has N symbols, each symbol represented with log 2 N bits.
+<===> each symbol has x bits -> having 2's power of x symbols
+- example:
+> A(00), B(01), C(10), D(11)
+
+### 计算2：
+ith symbol length = l(i) bits
+emit M symbols = M = m(i) 从i->N, has been emitted m(i) times
+number of bits = l(i)m(i) 从i->N
+average symbol length = L = l(i)m(i) / M
+average bit rate = L / T
+also, 
+L = P(i)l(i) 从i->N
+Entropy (H) is highest (equal to log 2 N) if all symbols are equally probable
+Entropy is small (always > 0) when some symbols that are much more likely to appear than other symbols
+
+### Lossless Compression
+ENTROPY ENCODING
+- LZW – PATTERN SUBSTITUTION
+- HUFFMAN CODING
+- ARITHMETIC CODING
+
+### Lossy Compression
+Lossy Compression is always a tradeoff between rate (number of bits used) and distortion
+<==> R 和 distortion 成反比
+
+- DPCM
+- TRANSFORM CODING
+
+
+## Image Compression
+-------------------------------------
+Resolution越高，单位面积内pixel越多，pixel密度(ppi) 越大
+1080p: 1920×1080 px, HD (high-definition)
+
+### JPEG COMPRESSION ALGORITHMIC
+1. 8x8 pixels
+2. DCT
+3. scalar quantization
+4. entropy coder
+
+### JPEG-2000
+JPEG-2000 has better compression performances than JPEG， high complexity
+- divided into tiles, then quantized
+- Each code-block is entropy-coded independently
+- encoded “naturally” progressively
+
+### DITHERING
+Normally done by dividing the image into k x k blocks. Each block can represent k2 +1 intensity levels.
+
+
+## Digital Rights Management
+------------------------------------
+> copyright protection
+
+watermarking
+encryption
