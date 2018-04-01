@@ -112,6 +112,15 @@ JPEG-2000 has better compression performances than JPEG, high complexity
 ### DITHERING
 Normally done by dividing the image into k x k blocks. Each block can represent k2 +1 intensity levels.
 
+## Video Compression
+-------------------------------------
+### Redundancy
+Spatial or Temporary
+Intraframe: Each frame is encoded as an entity
+Interframe: for Temporary - Motion Compensation: between current frame to prediction
+
+If we use lossy encoding, we should use a closed-loop scheme!
+
 
 ## Digital Rights Management
 ------------------------------------
