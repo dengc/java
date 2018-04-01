@@ -12,13 +12,21 @@
     <==> 2 cut-off F = F we sampled
 
 if less then 2F, aliasing
-4. filter: to avoid aliasing, digital low-pass filter before subsampling
-5. Scan
-    1. Progressive - left to right, top to bottom
-    2. Interlaced - even line, odd lines 
-6. subsampling
+
+###  filter
+To avoid aliasing, digital low-pass filter before subsampling
+
+### Scan
+1. Progressive - left to right, top to bottom
+2. Interlaced - even line, odd lines 
+
+### Subsampling
 ![Alt text](./Screen Shot 2018-03-31 at 10.40.33 PM.png)
 
+### 题目
+- F of stereophonic music = F of 2 mono music
+- File size = 长 * 宽 * ppi的平方 * color representation (bits)  (1 byte = 8 bits)
+    - n color: log n color rep
 
 ## Color  Theory
 -------------------------------------
@@ -54,8 +62,13 @@ average symbol length = L = l(i)m(i) / M
 average bit rate = L / T
 also, 
 L = P(i)l(i) 从i->N
-Entropy (H) is highest (equal to log 2 N) if all symbols are equally probable
-Entropy is small (always > 0) when some symbols that are much more likely to appear than other symbols
+
+### 计算3：
+Entropy (H) = 1/4 log2(4) + 1/4 log2(4) + 1/2 log2(2)
+- Entropy (H) is highest (equal to log 2 N) if all symbols are equally probable
+- Entropy is small (always > 0) when some symbols that are much more likely to appear than other symbols
+
+Efficiency = H / L
 
 ### Lossless Compression
 ENTROPY ENCODING
@@ -67,8 +80,16 @@ ENTROPY ENCODING
 Lossy Compression is always a tradeoff between rate (number of bits used) and distortion
 <==> R 和 distortion 成反比
 
-- DPCM
+- Differential PCM : d(n) = y(n) - y(n-1)
 - TRANSFORM CODING
+
+### 题目
+- Subband coding gives different resolutions to different bands. 
+    - if each different section band needs to be encoded differently, use subband
+
+- Subsampling groups pixels together into a meta-region and encodes a single value for the entire region.
+- how subband coding is used in MPEG1 audio: Audio PCM -> filter bank which gives different channel or bands -> each band separately encoded and quantized using different uniform quantization intervals.
+- In JPEG – spectral selection (subband), successive approx. (neither, but closer to subband), hierarchical (subsampling)
 
 
 ## Image Compression
@@ -83,7 +104,7 @@ Resolution越高，单位面积内pixel越多，pixel密度(ppi) 越大
 4. entropy coder
 
 ### JPEG-2000
-JPEG-2000 has better compression performances than JPEG， high complexity
+JPEG-2000 has better compression performances than JPEG, high complexity
 - divided into tiles, then quantized
 - Each code-block is entropy-coded independently
 - encoded “naturally” progressively
