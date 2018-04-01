@@ -2,12 +2,29 @@
 
 @(IT Studies)
 
+## Digital Data
+-------------------------------------
+### Analog to Digital
+1. Sampling -> Quantization
+2. Bit rate = (bits/sec) = Sampling rate (sampling frequency) x Quantization bits per sample = F * Q
+3. NYQUIST’S SAMPLING THEOREM
+    >Sampling frequency should be at least 2F for a signal whose maximum frequency is F
+    <==> 2 cut-off F = F we sampled
+
+if less then 2F, aliasing
+4. filter: to avoid aliasing, digital low-pass filter before subsampling
+5. Scan
+    1. Progressive - left to right, top to bottom
+    2. Interlaced - even line, odd lines 
+6. subsampling
+![Alt text](./Screen Shot 2018-03-31 at 10.40.33 PM.png)
+
 
 ## Color  Theory
 -------------------------------------
 ### Frequency
 - Red to Purple : f -> low to high
-- Wavelength * f = v
+- f = v / Wavelength = 1/T
 - different spectrum can be same perceived color C
 
 ### Projector
