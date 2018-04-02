@@ -90,7 +90,8 @@ Lossy Compression is always a tradeoff between rate (number of bits used) and di
 - Subsampling groups pixels together into a meta-region and encodes a single value for the entire region.
 - how subband coding is used in MPEG1 audio: Audio PCM -> filter bank which gives different channel or bands -> each band separately encoded and quantized using different uniform quantization intervals.
 - In JPEG – spectral selection (subband), successive approx. (neither, but closer to subband), hierarchical (subsampling)
-
+- CBR: fixed bit rate -> faster (throughput is greater, quality may be compromised depending on your bandwidth.)
+- VBR: dynamically change -> small size (Huffman, Lossless mode of JPEG)
 
 ## Image Compression
 -------------------------------------
@@ -119,8 +120,30 @@ Spatial or Temporary
 Intraframe: Each frame is encoded as an entity
 Interframe: for Temporary - Motion Compensation: between current frame to prediction
 
+### Motion Compensation
 If we use lossy encoding, we should use a closed-loop scheme!
+Compression of I < compression of P < compression of B
+- I‑frames don't require other video frames to decode.
+- P‑frames can use data from previous frames to decompress
+- B‑frames can use both previous and forward frames for data reference to get the highest amount of data compression.
 
+## Audio Compression
+-------------------------------------
+### Waveform
+statistical distribution 
+- w/ DPCM & Entropy Coding
+
+### Perception-Based
+Psychoacoustics
+- with human auditory system
+
+### Production-Based
+Physics Model motivated
+
+### Event Lists
+structured audio
+- low-bandwidth trans
+- music synthesis and creation
 
 ## Digital Rights Management
 ------------------------------------
