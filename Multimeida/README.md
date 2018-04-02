@@ -26,24 +26,32 @@ To avoid aliasing, digital low-pass filter before subsampling
 ### 题目
 - F of stereophonic music = F of 2 mono music
 - File size = 长 * 宽 * ppi的平方 * color representation (bits)  (1 byte = 8 bits)
-    - n color: log n color rep
+    - n color: log n bits color rep
 
 ## Color  Theory
 -------------------------------------
 ### Frequency
 - Red to Purple : f -> low to high
 - f = v / Wavelength = 1/T
-- different spectrum can be same perceived color C
+- different spectrum can be same perceived color C, which means we do not have to produce the spectrum, but the color
 
 ### Projector
-- P(primaries) = 3 light sources, associated with M
+- P(primaries) = 3 light sources (the entries of C), associated with M
 - M {m1, m2, m3} = filters, generate channels
 - a {a1, a2, a3} = channels
 - g = generated spectrum
 
 #### Different Filters
 - RGB -> associated with primaries
-- XYZ -> CIE
+- XYZ -> CIE : is not perceptually uniform because perceptual differences between colors do not correspond to equal distance in color space
+
+### 题目
+- Color gamut of a color synthesis device = set of obtainable colors. 
+- x = X / (X+Y+Z)
+- YCrCb is preferable to RGB for image compression because it allows us to reduce the data size without compromising the image quality 
+    - subsampling the chrominance channels
+    - quantizing the chrominance more coarsely
+    - YCrCb are more uncorrelated and have smaller entropy than the RGB
 
 
 ## Information  Theory & Compression
@@ -144,6 +152,11 @@ Physics Model motivated
 structured audio
 - low-bandwidth trans
 - music synthesis and creation
+
+
+## Graphic Compression
+-------------------------------------
+
 
 ## Digital Rights Management
 ------------------------------------
