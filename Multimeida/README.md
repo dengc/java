@@ -149,5 +149,9 @@ structured audio
 ------------------------------------
 > copyright protection
 
-watermarking
-encryption
+### watermarking
+> bonded to the original 
+
+### Encryption
+> protect data during transit
+with public & private key
