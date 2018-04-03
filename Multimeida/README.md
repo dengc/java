@@ -28,7 +28,7 @@ To avoid aliasing, digital low-pass filter before subsampling
 - File size = 长 * 宽 * ppi的平方 * color representation (bits)  (1 byte = 8 bits)
     - n color: log n bits color rep
 
-## Color  Theory
+## Color Theory
 -------------------------------------
 ### Frequency
 - Red to Purple : f -> low to high
@@ -54,8 +54,11 @@ To avoid aliasing, digital low-pass filter before subsampling
     - YCrCb are more uncorrelated and have smaller entropy than the RGB
 
 
-## Information  Theory & Compression
+## Information Theory & Compression
 -------------------------------------
+efficiency - source coding
+reliable - channel coding
+
 ### 计算1：
 If your vocabulary has N symbols, each symbol represented with log 2 N bits.
 <===> each symbol has x bits -> having 2's power of x symbols
@@ -100,6 +103,9 @@ Lossy Compression is always a tradeoff between rate (number of bits used) and di
 - In JPEG – spectral selection (subband), successive approx. (neither, but closer to subband), hierarchical (subsampling)
 - CBR: fixed bit rate -> faster (throughput is greater, quality may be compromised depending on your bandwidth.)
 - VBR: dynamically change -> small size (Huffman, Lossless mode of JPEG)
+
+Huffman Coding
+![Alt text](./Screen Shot 2018-04-01 at 2.35.05 PM.png)
 
 ## Image Compression
 -------------------------------------
@@ -156,15 +162,20 @@ structured audio
 
 ## Graphic Compression
 -------------------------------------
+raster: digital images created or captured, Fixed Resolution once created
+vector: a sequence of points to be connected, Takes a lot less memory than Raster
 
+3D MESHES: with edges, vertices, faces -> shape of modeling
+topological
 
 ## Digital Rights Management
 ------------------------------------
 > copyright protection
 
-### watermarking
+### Watermarking
 > bonded to the original 
 
 ### Encryption
 > protect data during transit
+
 with public & private key
